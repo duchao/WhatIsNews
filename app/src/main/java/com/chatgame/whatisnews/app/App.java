@@ -9,6 +9,9 @@ import android.view.Display;
 import android.view.WindowManager;
 
 import com.chatgame.whatisnews.component.CrashHandler;
+import com.chatgame.whatisnews.di.component.AppComponent;
+import com.chatgame.whatisnews.di.component.DaggerAppComponent;
+import com.chatgame.whatisnews.di.module.AppModule;
 import com.chatgame.whatisnews.widget.AppBlockCanaryContext;
 import com.github.moduth.blockcanary.BlockCanary;
 import com.orhanobut.logger.Logger;
@@ -97,5 +100,12 @@ public class App extends Application {
         }
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
+    }
+
+    public static AppComponent getAppComponent() {
+        return DaggerAppComponent.builder()
+                .appModule(new AppModule(instance))
+                .build();
+
     }
 }
