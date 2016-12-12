@@ -46,7 +46,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        getScreenSize();
+
 
         //初始化日志
         Logger.init(getPackageName()).hideThreadInfo();
@@ -59,6 +59,7 @@ public class App extends Application {
 
         //初始化过度绘制检测
         BlockCanary.install(this, new AppBlockCanaryContext()).start();
+        getScreenSize();
     }
 
     public void getScreenSize() {

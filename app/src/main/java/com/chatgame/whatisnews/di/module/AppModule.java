@@ -2,6 +2,7 @@ package com.chatgame.whatisnews.di.module;
 
 import com.chatgame.whatisnews.app.App;
 import com.chatgame.whatisnews.di.ContextLife;
+import com.chatgame.whatisnews.model.http.RetrofitHelper;
 
 import javax.inject.Singleton;
 
@@ -23,5 +24,11 @@ public class AppModule {
     @ContextLife("Application")
     App provideApplicationContext() {
         return mApp;
+    }
+
+    @Provides
+    @Singleton
+    RetrofitHelper provideRetrofitHelper() {
+        return new RetrofitHelper();
     }
 }

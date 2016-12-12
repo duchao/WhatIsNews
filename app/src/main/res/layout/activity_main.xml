@@ -15,4 +15,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!"/>
+
+    <Button
+            android:id="@+id/btn_test_welcome"
+            android:layout_marginTop="200dp"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:text="Hello World!"/>
 </RelativeLayout>
