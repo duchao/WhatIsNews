@@ -53,5 +53,5 @@ public abstract class SimpleActivity extends AppCompatActivity {
 
     protected abstract int getLayout();
 
-    protected  abstract void initEventAndData();
+    protected abstract void initEventAndData();
 }

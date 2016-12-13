@@ -1,6 +1,8 @@
 package com.chatgame.whatisnews.base;
+
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
+
 /**
  * Created by duchao on 2016/12/7.
  */
@@ -8,6 +10,7 @@ import rx.subscriptions.CompositeSubscription;
 public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
     protected T mView;
     protected CompositeSubscription mCompositeSubscription;
+
     @Override
     public void attachView(T view) {
         mView = view;

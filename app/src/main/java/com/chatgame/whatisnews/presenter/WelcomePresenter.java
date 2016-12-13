@@ -25,6 +25,7 @@ public class WelcomePresenter extends RxPresenter<WelcomeContract.View> implemen
 
     static final int COUNT_DOWN_TIME = 2200;
     private RetrofitHelper mRetrofitHelper;
+
     @Inject
     public WelcomePresenter(RetrofitHelper retrofitHelper) {
         mRetrofitHelper = retrofitHelper;

@@ -19,7 +19,7 @@ import butterknife.BindView;
  * Created by duchao on 2016/12/9.
  */
 
-public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements WelcomeContract.View{
+public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements WelcomeContract.View {
 
     @BindView(R.id.img_welcome_bg)
     ImageView mImgWelcomeBg;
@@ -56,7 +56,6 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements W
         startActivity(intent);
         finish();
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-
     }
 
     @Override
@@ -68,6 +67,5 @@ public class WelcomeActivity extends BaseActivity<WelcomePresenter> implements W
     protected void onDestroy() {
         Glide.clear(mImgWelcomeBg);
         super.onDestroy();
-
     }
 }

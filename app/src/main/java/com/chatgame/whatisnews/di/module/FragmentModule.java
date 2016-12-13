@@ -22,7 +22,7 @@ public class FragmentModule {
     @Provides
     @FragmentScope
     public Activity provideFragment() {
-        return  mFragment.getActivity();
+        return mFragment.getActivity();
     }
 
 }

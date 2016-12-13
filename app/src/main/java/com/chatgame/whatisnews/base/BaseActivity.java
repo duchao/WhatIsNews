@@ -37,7 +37,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
         mUnbinder = ButterKnife.bind(this);
         mActivity = this;
         initInject();
-        if (mPresenter != null){
+        if (mPresenter != null) {
             mPresenter.attachView(this);
         }
         App.getInstance().addActivity(this);
@@ -90,7 +90,7 @@ public abstract class BaseActivity<T extends BasePresenter> extends AppCompatAct
     }
 
     protected void setToolBar(Toolbar toolbar, String title) {
-        toolbar.setTitle(title );
+        toolbar.setTitle(title);
         setSupportActionBar(toolbar);//toolbar取代actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//在左边加一个返回的图标
         getSupportActionBar().setDisplayShowHomeEnabled(true);//左上角图标可以点击

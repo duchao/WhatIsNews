@@ -34,8 +34,6 @@ public class RetrofitHelper {
         zhihuApiService = getZhihuApiService();
     }
 
-
-
     public RetrofitHelper() {
         init();
 
@@ -49,7 +47,7 @@ public class RetrofitHelper {
             builder.addInterceptor(loggingInterceptor);
         }
         File cacheFile = new File(Constants.PATH_CACHE);
-        Cache cache = new Cache(cacheFile, 1024*1024*50);
+        Cache cache = new Cache(cacheFile, 1024 * 1024 * 50);
         Interceptor cacheIntercepter = new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
@@ -59,7 +57,7 @@ public class RetrofitHelper {
                             .cacheControl(CacheControl.FORCE_CACHE)
                             .build();
                 }
-                Response response  = chain.proceed(request);
+                Response response = chain.proceed(request);
                 if (SystemUtil.isNetworkConnected()) {
                     int maxAge = 0;
                     response.newBuilder()

@@ -9,7 +9,7 @@ import rx.schedulers.Schedulers;
  */
 
 public class RxUtil {
-    public static <T>Observable.Transformer<T, T> rxSchedulerHelper() {
+    public static <T> Observable.Transformer<T, T> rxSchedulerHelper() {
         return new Observable.Transformer<T, T>() {
             @Override
             public Observable<T> call(Observable<T> observable) {

@@ -14,5 +14,5 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Documented
 @Retention(RUNTIME)
 public @interface ContextLife {
-    String value() default  "Application";
+    String value() default "Application";
 }

@@ -11,11 +11,12 @@ import com.chatgame.whatisnews.ui.main.activity.WelcomeActivity;
 public class MainActivity extends AppCompatActivity {
 
     private Button mButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mButton = (Button)findViewById(R.id.btn_test_welcome);
+        mButton = (Button) findViewById(R.id.btn_test_welcome);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
